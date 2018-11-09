@@ -16,8 +16,7 @@ variable "VCNname" {
 }
 
 variable "ADs" {
- default = ["mmXc:PHX-AD-2","mmXc:PHX-AD-1","mmXc:PHX-AD-3"]
-#  default = ["pnkC:EU-FRANKFURT-1-AD-1", "pnkC:EU-FRANKFURT-1-AD-2", "pnkC:EU-FRANKFURT-1-AD-3"]
+  default = ["pnkC:EU-FRANKFURT-1-AD-1", "pnkC:EU-FRANKFURT-1-AD-2", "pnkC:EU-FRANKFURT-1-AD-3"]
 }
 
 variable "Shapes" {
@@ -26,8 +25,6 @@ variable "Shapes" {
 
 variable "Images" {
  # Oracle-Linux-7.5-2018.05.09-1 in Frankfurt
- #default = ["ocid1.image.oc1.eu-frankfurt-1.aaaaaaaazregkysspxnktw35k4r5vzwurxk6myu44umqthjeakbkvxvxdlkq"]
- # Oracle-Linux-7.5-2018.08.14-0 in Phoenix
- default = ["ocid1.image.oc1.phx.aaaaaaaasez4lk2lucxcm52nslj5nhkvbvjtfies4yopwoy4b3vysg5iwjra"]
+ default = ["ocid1.image.oc1.eu-frankfurt-1.aaaaaaaazregkysspxnktw35k4r5vzwurxk6myu44umqthjeakbkvxvxdlkq"]
 }
 
