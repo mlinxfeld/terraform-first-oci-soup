@@ -16,6 +16,6 @@ resource "oci_core_security_list" "FoggyKitchenHTTPSSecurityList" {
     },
 	{
 	protocol = "6"
-        source = "${var.VPC-CIDR}"
+        source = "${var.VCN-CIDR}"
     }]	
 }
