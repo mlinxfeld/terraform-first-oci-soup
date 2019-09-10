@@ -9,7 +9,7 @@ resource "oci_core_instance" "FoggyKitchenWebserver1" {
     source_id   = "${var.Images[0]}"
   }
   metadata {
-      ssh_authorized_keys = "${file("${var.public_key_oci}")}"
+      ssh_authorized_keys = "${var.public_key_oci}"
   }
   create_vnic_details {
      subnet_id = "${oci_core_subnet.FoggyKitchenSubnet1.id}"
