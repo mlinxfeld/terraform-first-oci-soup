@@ -7,6 +7,6 @@ resource "oci_core_subnet" "FoggyKitchenSubnet1" {
   vcn_id = "${oci_core_virtual_network.FoggyKitchenVCN.id}"
   route_table_id = "${oci_core_route_table.FoggyKitchenRouteTable1.id}"
   dhcp_options_id = "${oci_core_dhcp_options.FoggyKitchenDhcpOptions1.id}"
-  security_list_ids = ["${oci_core_security_list.FoggyKitchenSSHSecurityList.id}","${oci_core_security_list.FoggyKitchenHTTPSecurityList.id}","${oci_core_security_list.FoggyKitchenHTTPSSecurityList.id}"]
+  security_list_ids = ["${oci_core_security_list.FoggyKitchenSecurityList.id}"]
 }
 
