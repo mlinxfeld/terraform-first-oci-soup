@@ -1,6 +1,6 @@
-locals {
-  service_ports = [{min=80,max=80},{min=443,max=443},{min=22,max=22}]
-}
+#locals {
+#  service_ports = [{min=80,max=80},{min=443,max=443},{min=22,max=22}]
+#}
 
 resource "oci_core_security_list" "FoggyKitchenSecurityList" {
     compartment_id = "${oci_identity_compartment.FoggyKitchenCompartment.id}"
@@ -13,13 +13,16 @@ resource "oci_core_security_list" "FoggyKitchenSecurityList" {
     }
     
     dynamic "ingress_security_rules" {
-    for_each = local.service_ports
+#    for_each = local.service_ports
+    for_each = var.service_ports
     content {
       protocol = "6"
         source = "0.0.0.0/0"
         tcp_options {
-            max = ingress_security_rules.value.min
-            min = ingress_security_rules.value.max
+            max = ingress_security_rules.value
+            min = ingress_security_rules.value
+#            max = ingress_security_rules.value.min
+#            min = ingress_security_rules.value.max
             }
         }
     }

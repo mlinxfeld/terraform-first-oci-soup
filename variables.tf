@@ -28,3 +28,6 @@ variable "Images" {
  default = ["ocid1.image.oc1.eu-frankfurt-1.aaaaaaaazregkysspxnktw35k4r5vzwurxk6myu44umqthjeakbkvxvxdlkq"]
 }
 
+variable "service_ports" {
+  default = [80,443,22]
+}
