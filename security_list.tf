@@ -20,9 +20,9 @@ resource "oci_core_security_list" "FoggyKitchenSecurityList" {
         tcp_options {
             max = ingress_security_rules.value.min
             min = ingress_security_rules.value.max
+            }
         }
     }
-
 #    ingress_security_rules {
 #        protocol = "6"
 #        source = "0.0.0.0/0"
