@@ -1,7 +1,7 @@
 resource "oci_core_instance" "FoggyKitchenWebserver1" {
   availability_domain = "${var.ADs[0]}"
   compartment_id = "${oci_identity_compartment.FoggyKitchenCompartment.id}"
-  display_name = "FoggyKitchenWebServer1"
+  display_name = "FoggyKitchenWebServer01"
   shape = "${var.Shapes[0]}"
   subnet_id = "${oci_core_subnet.FoggyKitchenSubnet1.id}"
   source_details {

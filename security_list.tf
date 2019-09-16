@@ -3,7 +3,8 @@ resource "oci_core_security_list" "FoggyKitchenSecurityList" {
     compartment_id = "${oci_identity_compartment.FoggyKitchenCompartment.id}"
     display_name = "FoggyKitchenSecurityList"
     vcn_id = "${oci_core_virtual_network.FoggyKitchenVCN.id}"
-    
+   
+ 
     egress_security_rules {
 	    protocol = "6"
         destination = "0.0.0.0/0"
@@ -26,3 +27,4 @@ resource "oci_core_security_list" "FoggyKitchenSecurityList" {
         source = "${var.VCN-CIDR}"
     }
 }
+
