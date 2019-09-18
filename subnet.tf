@@ -1,7 +1,7 @@
 resource "oci_core_subnet" "FoggyKitchenSubnet1" {
   availability_domain = "${var.ADs[0]}"
   cidr_block = "10.0.1.0/24"
-  display_name = "FoggyKitchenSubnet1"
+  display_name = "FoggyKitchenSubnet"
   dns_label = "FoggyKitchenN1"
   compartment_id = "${oci_identity_compartment.FoggyKitchenCompartment.id}"
   vcn_id = "${oci_core_virtual_network.FoggyKitchenVCN.id}"
