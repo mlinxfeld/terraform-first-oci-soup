@@ -1,7 +1,7 @@
 
 resource "oci_core_security_list" "FoggyKitchenSecurityList" {
     compartment_id = "${oci_identity_compartment.FoggyKitchenCompartment.id}"
-    display_name = "FoggyKitchenSecurityList"
+    display_name = "FoggyKitchenSecurityList1"
     vcn_id = "${oci_core_virtual_network.FoggyKitchenVCN.id}"
    
  
